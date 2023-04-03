@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+p,
+img,
+span {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  background-image: url(../assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+header nav .honeycomb {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+@-webkit-keyframes honeycomb {
+  0%, 20%, 80%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes honeycomb {
+  0%, 20%, 80%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+header nav .honeycomb div {
+  -webkit-animation: honeycomb 2.1s infinite backwards;
+  animation: honeycomb 2.1s infinite backwards;
+  background: #f3f3f3;
+  height: 12px;
+  margin-top: 6px;
+  position: absolute;
+  width: 24px;
+}
+header nav .honeycomb div::after::before {
+  content: "";
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header nav .honeycomb div::after {
+  top: -6px;
+  border-bottom: 6px solid #f3f3f3;
+}
+header nav .honeycomb div::before {
+  bottom: -6px;
+  border-top: 6px solid #f3f3f3;
+}
+header nav .honeycomb div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  left: -28px;
+  top: 0;
+}
+header nav .honeycomb div:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  left: -14px;
+  top: 22px;
+}
+header nav .honeycomb div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  left: 14px;
+  top: 22px;
+}
+header nav .honeycomb div:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  left: 28px;
+  top: 0;
+}
+header nav .honeycomb div:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  left: 14px;
+  top: -22px;
+}
+header nav .honeycomb div:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  left: -14px;
+  top: -22px;
+}
+header nav .honeycomb div:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  left: 0;
+  top: 0;
+}
+header nav .info-itens ul {
+  display: inline-block;
+  padding: 10px 25px;
+}
+header nav .info-itens li {
+  display: inline-block;
+  padding: 20px 35px;
+}
+header nav .info-itens a {
+  position: relative;
+  text-align: center;
+}
+header nav .info-itens a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -2;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+header nav .info-itens a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+main .block {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .block .social-itens {
+  position: relative;
+  margin-left: 38px;
+}
+main .block .social-itens a i {
+  font-size: 50px;
+  padding: 20px;
+  transition: transform 0.5s ease;
+}
+main .block .social-itens a i:hover {
+  transform: scale(1.1);
+}
+main .block .name-info {
+  position: relative;
+  margin-left: 80px;
+  margin-top: 75px;
+}
+main .block .name-info h2 {
+  bottom: 180px;
+  position: absolute;
+  font-family: "Press Start 2P";
+  font-size: 35px;
+}
+main .block .name-info h3,
+main .block .name-info h4 {
+  font-family: "Press Start 2P";
+  font-size: 35px;
+}
+main .block .name-info img {
+  position: absolute;
+  top: 85px;
+  right: 37%;
+}
+main .block .my {
+  position: relative;
+}
+main .block .my-icon img {
+  position: relative;
+  margin-right: 55px;
+  animation: moveUpDown 2s infinite;
+  z-index: 1;
+}
+@keyframes moveUpDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    /* Defina a quantidade de movimento vertical que deseja */
+  }
+  100% {
+    top: 0;
+  }
+}
+main .block .my-bg {
+  position: absolute;
+  top: 0px;
+  right: 41px;
+}
+main .line {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 8%;
+}
+main section .aboutblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section .aboutblock .card {
+  border: solid rgb(0, 0, 0);
+  position: relative;
+  margin-left: 150px;
+  box-shadow: 0 8px 10px rgba(153, 153, 153, 0.2);
+  border-radius: 25px;
+  width: 550px;
+  height: 250px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main section .aboutblock .card-txt h2 {
+  position: relative;
+  text-align: center;
+  bottom: 42px;
+}
+main section .aboutblock .card img {
+  position: absolute;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  top: 68px;
+  left: 50px;
+}
+main section .aboutblock .card-info {
+  width: 290px;
+  height: 180px;
+  margin-right: 10%;
+  position: relative;
+  box-shadow: 0 0, 2px 0, 3px rgba(0, 0, 0, 0.2);
+  float: right;
+  border-radius: 5px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  margin-top: 10px;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main section .aboutblock .card-info p {
+  text-align: center;
+  margin-top: 35px;
+}
+main section .aboutblock .slider {
+  border: solid rgb(0, 0, 0);
+  margin-right: 150px;
+  box-shadow: 0 8px 10px rgba(153, 153, 153, 0.2);
+  border-radius: 25px;
+  width: 550px;
+  height: 250px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main section .aboutblock .slider p {
+  margin-top: 120px;
+  text-align: center;
+}
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+main section .container2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 39px;
+}
+main section .container2 .card {
+  border: solid rgb(0, 0, 0);
+  margin-top: 50px;
+  box-shadow: 0 8px 10px rgba(153, 153, 153, 0.2);
+  border-radius: 25px;
+  width: 600px;
+  height: 100px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main section .container2 .card-skills {
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
+main section .container2 .card-skills ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+main section .container2 .card-skills a {
+  color: black;
+}
+main section .container2 .card-skills i {
+  font-size: 50px;
+  transition: transform 0.5s ease;
+}
+main section .container2 .card-skills i:hover {
+  transform: scale(1.1);
+}
+main section .container2 p {
+  font-family: "Press Start 2P";
+  position: absolute;
+  font-size: 20px;
+  justify-content: center;
+  bottom: 113px;
+}
+main .line2 {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 4%;
+}
+main .projetos .projetos-itens {
+  display: flex;
+  justify-content: space-between;
+}
+main .projetos .projetos-itens-card1 {
+  border-radius: 15px;
+  border: solid rgb(0, 0, 0);
+  width: 500px;
+  height: 500px;
+  margin-left: 90px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main .projetos .projetos-itens-card2 {
+  border-radius: 15px;
+  border: solid rgb(0, 0, 0);
+  width: 500px;
+  height: 500px;
+  margin-right: 90px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+main .line3 {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 2%;
+}
+main .contactsblock {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+main .contactsblock .contacts-itens {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+main .contactsblock .contacts-itens li a {
+  position: relative;
+  display: flex;
+  border: solid rgb(0, 0, 0);
+  height: 130px;
+  width: 180px;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+main .contactsblock .contacts-itens li a i {
+  position: absolute;
+  color: black;
+  font-size: 35px;
+  top: 30px;
+}
+main .contactsblock .contacts-itens li a p {
+  font-size: 25px;
+  color: black;
+  position: absolute;
+  top: 70px;
+}
+main .contactsblock .contacts h2 {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 5px 0;
+  border-top: 3px solid;
+}
+
+/*# sourceMappingURL=styles.css.map */
